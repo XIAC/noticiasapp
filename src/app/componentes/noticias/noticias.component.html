@@ -2,10 +2,7 @@
   <ion-row>
     <ion-col *ngFor="let noticia of noticiasLista; let i = index" size="12" size-lg="3" size-md="4" size-sm="6" size-xs="12">
       <app-noticia [noticia]="noticia" [indice]="i"></app-noticia>
-      <ion-img *ngIf="noticia.urlToImage" [src]="noticia.urlToImage"></ion-img>
-      <ion-card-content>
-        <p>{{noticia.description}}</p>
-      </ion-card-content>
+     
     </ion-col>
   </ion-row>
 </ion-grid>

@@ -12,6 +12,6 @@ export class NoticiaService {
     return this.http.get<Respuesta>(`http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=4f13656b64774c9ebcc9ca96ee4ba2dd`);
   }
   getCategoriasNoticias(categorias:string){
-    return this.http.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=4f13656b64774c9ebcc9ca96ee4ba2dd`);
+    return this.http.get<Respuesta>(`http://newsapi.org/v2/top-headlines?country=us&category=${categorias}&apiKey=4f13656b64774c9ebcc9ca96ee4ba2dd`);
   }
 }
